@@ -16,6 +16,11 @@
 		8C9B58832C82CE8400866110 /* IQKeyboardBehaviorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9B58822C82CE8400866110 /* IQKeyboardBehaviorTests.swift */; };
 		8C9B588D2C82CE8400866110 /* IQKeyboardBehaviorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9B588C2C82CE8400866110 /* IQKeyboardBehaviorUITests.swift */; };
 		8C9B588F2C82CE8400866110 /* IQKeyboardBehaviorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9B588E2C82CE8400866110 /* IQKeyboardBehaviorUITestsLaunchTests.swift */; };
+		8C9B589E2C82CEDE00866110 /* NextGrowingTextView in Frameworks */ = {isa = PBXBuildFile; productRef = 8C9B589D2C82CEDE00866110 /* NextGrowingTextView */; };
+		8C9B58A12C82CEF600866110 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8C9B58A02C82CEF600866110 /* IQKeyboardManagerSwift */; };
+		8C9B58A42C82CF7300866110 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8C9B58A32C82CF7300866110 /* SnapKit */; };
+		8C9B58A62C82CFCE00866110 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9B58A52C82CFCE00866110 /* UITableViewExtensions.swift */; };
+		8C9B58A82C82D01100866110 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9B58A72C82D01100866110 /* UIViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,8 @@
 		8C9B58882C82CE8400866110 /* IQKeyboardBehaviorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IQKeyboardBehaviorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C9B588C2C82CE8400866110 /* IQKeyboardBehaviorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IQKeyboardBehaviorUITests.swift; sourceTree = "<group>"; };
 		8C9B588E2C82CE8400866110 /* IQKeyboardBehaviorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IQKeyboardBehaviorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8C9B58A52C82CFCE00866110 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
+		8C9B58A72C82D01100866110 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +63,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C9B58A42C82CF7300866110 /* SnapKit in Frameworks */,
+				8C9B589E2C82CEDE00866110 /* NextGrowingTextView in Frameworks */,
+				8C9B58A12C82CEF600866110 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +109,7 @@
 		8C9B586A2C82CE8300866110 /* IQKeyboardBehavior */ = {
 			isa = PBXGroup;
 			children = (
+				8C9B589B2C82CE9000866110 /* Extension */,
 				8C9B586B2C82CE8300866110 /* AppDelegate.swift */,
 				8C9B586D2C82CE8300866110 /* SceneDelegate.swift */,
 				8C9B586F2C82CE8300866110 /* ViewController.swift */,
@@ -127,6 +138,15 @@
 			path = IQKeyboardBehaviorUITests;
 			sourceTree = "<group>";
 		};
+		8C9B589B2C82CE9000866110 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8C9B58A72C82D01100866110 /* UIViewExtensions.swift */,
+				8C9B58A52C82CFCE00866110 /* UITableViewExtensions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +163,11 @@
 			dependencies = (
 			);
 			name = IQKeyboardBehavior;
+			packageProductDependencies = (
+				8C9B589D2C82CEDE00866110 /* NextGrowingTextView */,
+				8C9B58A02C82CEF600866110 /* IQKeyboardManagerSwift */,
+				8C9B58A32C82CF7300866110 /* SnapKit */,
+			);
 			productName = IQKeyboardBehavior;
 			productReference = 8C9B58682C82CE8300866110 /* IQKeyboardBehavior.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +240,11 @@
 				Base,
 			);
 			mainGroup = 8C9B585F2C82CE8300866110;
+			packageReferences = (
+				8C9B589C2C82CEDE00866110 /* XCRemoteSwiftPackageReference "NextGrowingTextView" */,
+				8C9B589F2C82CEF600866110 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				8C9B58A22C82CF7300866110 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 8C9B58692C82CE8300866110 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,8 +289,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C9B58702C82CE8300866110 /* ViewController.swift in Sources */,
+				8C9B58A82C82D01100866110 /* UIViewExtensions.swift in Sources */,
 				8C9B586C2C82CE8300866110 /* AppDelegate.swift in Sources */,
 				8C9B586E2C82CE8300866110 /* SceneDelegate.swift in Sources */,
+				8C9B58A62C82CFCE00866110 /* UITableViewExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,6 +639,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8C9B589C2C82CEDE00866110 /* XCRemoteSwiftPackageReference "NextGrowingTextView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/FluidGroup/NextGrowingTextView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.1;
+			};
+		};
+		8C9B589F2C82CEF600866110 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.1.1;
+			};
+		};
+		8C9B58A22C82CF7300866110 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8C9B589D2C82CEDE00866110 /* NextGrowingTextView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C9B589C2C82CEDE00866110 /* XCRemoteSwiftPackageReference "NextGrowingTextView" */;
+			productName = NextGrowingTextView;
+		};
+		8C9B58A02C82CEF600866110 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C9B589F2C82CEF600866110 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		8C9B58A32C82CF7300866110 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C9B58A22C82CF7300866110 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8C9B58602C82CE8300866110 /* Project object */;
 }
